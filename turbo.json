@@ -13,6 +13,24 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "start": {
+      "persistent": true
+    },
+    "clean": {
+      "dependsOn": [
+        "^clean"
+      ]
+    },
+    "clean:all": {
+      "dependsOn": [
+        "^clean:all"
+      ]
+    },
+    "format": {
+      "dependsOn": [
+        "^format"
+      ]
     }
   }
 }

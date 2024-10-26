@@ -1,0 +1,19 @@
+{
+  "name": "bot",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc --project tsconfig.json",
+    "lint": "biome lint --write ./src",
+    "format": "biome format --write ./src",
+    "clean": "node ../../scripts/clean.js",
+    "clean:all": "npm run clean && npm run clean:node_modules && npm run clean:cache",
+    "clean:node_modules": "node ../../scripts/clear-node-modules.js",
+    "clean:cache": "node ../../scripts/clear-turbo-cache.js"
+  },
+  "dependencies": {
+    "@lume/typescript-config": "*"
+  }
+}
